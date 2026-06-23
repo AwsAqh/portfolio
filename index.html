@@ -3,113 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aws Aqhash | Full-Stack Developer</title>
-    <meta name="description" content="Full-Stack Developer specializing in React.js, ASP.NET Core, and Node.js">
+    <title>Aws Aqhash — Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Aws Aqhash, a full-stack developer specializing in React, Node.js, and .NET.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1K0GHL5RW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F1K0GHL5RW');
-</script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1K0GHL5RW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F1K0GHL5RW');
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="logo">Aws Aqhash</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
-                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-            </ul>
-            <div class="mobile-menu" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-</nav>
 
-    <!-- Marquee Banner -->
-    <div class="marquee-banner">
-        <div class="marquee-content">
-            🌟 WELCOME TO MY 90S PORTFOLIO! 🌟 BEST VIEWED WITH NETSCAPE NAVIGATOR 🌟 CLICK HERE FOR FREE PIZZA 🌟
+    <!-- ===== BOT COMPANION ===== -->
+    <div class="bot-companion" id="bot">
+        <div class="bot-message" id="botMessage">Nice to meet you! 👋</div>
+        <div class="bot-body" id="botBody" title="Hey there!">
+            <!-- Claude-code-style abstract SVG face -->
+            <svg class="bot-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract flowing lines (Claude icon-inspired) -->
+                <path d="M16 6 C10 6, 6 10, 6 16 C6 20, 8.5 23.5, 12 25.5" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M16 6 C22 6, 26 10, 26 16 C26 20, 23.5 23.5, 20 25.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M11 13 C11 13, 13.5 11.5, 16 13 C18.5 14.5, 20 13, 21 13" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M11 19 C12 19, 14 20.5, 16 19 C18 17.5, 20 19, 21 19" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="2.2" fill="rgba(255,255,255,0.9)"/>
+                <circle cx="16" cy="16" r="1" fill="rgba(217,119,6,0.8)"/>
+            </svg>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Aws Aqhash</h1>
-                    <div class="tagline">Full-Stack Developer</div>
-                    <p>I build modern web applications with clean code and intuitive user experiences. Passionate about creating scalable solutions that make a difference.</p>
-                    <div class="hero-buttons">
-                         <a href="#projects" class="btn btn-primary">
-                             <i class="fas fa-rocket"></i> View My Work
-                         </a>
-                         <a href="./resume/Aws-Aqhash-CV.pdf" download class="btn btn-secondary">
-                             <i class="fas fa-download"></i> Download CV
-                         </a>
-                     </div>
-                     <div class="retro-badge">
-                         BEST VIEWED AT 1024x768
-                     </div>
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;<span class="slash">/</span>&gt;</span>
+                <span class="logo-name">Aws Aqhash</span>
+            </a>
+
+            <!-- Center links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right side -->
+            <div class="nav-right">
+                <a href="#contact" class="btn-nav">Hire me</a>
+                <div class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="profile-image-container">
-                    <div class="profile-image">
-                        <img src="./images/me.png"/>
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#projects" onclick="closeMobileMenu()">Work</a>
+        <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <!-- ===== HERO — 3 Columns ===== -->
+    <section class="hero" id="home">
+
+        <!-- Decorative sketches -->
+        <div class="hero-sketches" aria-hidden="true">
+            <!-- Star / asterisk -->
+            <svg class="sk sk-1" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg>
+            <!-- Circle -->
+            <svg class="sk sk-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+            <!-- Zigzag / wave -->
+            <svg class="sk sk-3" viewBox="0 0 40 16"><polyline points="0,8 8,2 16,14 24,2 32,14 40,8"/></svg>
+            <!-- Plus -->
+            <svg class="sk sk-4" viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg>
+            <!-- Triangle -->
+            <svg class="sk sk-5" viewBox="0 0 24 24"><polygon points="12,3 21,20 3,20"/></svg>
+            <!-- Small dots cluster -->
+            <svg class="sk sk-6" viewBox="0 0 28 12"><circle cx="4" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="24" cy="6" r="2"/></svg>
+            <!-- Brackets -->
+            <svg class="sk sk-7" viewBox="0 0 24 24"><path d="M9 4 L5 4 L5 20 L9 20"/><path d="M15 4 L19 4 L19 20 L15 20"/></svg>
+            <!-- Spiral-ish scribble -->
+            <svg class="sk sk-8" viewBox="0 0 32 32"><path d="M16 16 C16 10, 22 8, 24 14 C26 20, 20 26, 14 24 C8 22, 6 14, 10 10 C14 6, 22 6, 26 12"/></svg>
+            <!-- Arrow -->
+            <svg class="sk sk-9" viewBox="0 0 32 16"><line x1="2" y1="8" x2="28" y2="8"/><polyline points="20,2 28,8 20,14"/></svg>
+            <!-- Diamond -->
+            <svg class="sk sk-10" viewBox="0 0 24 24"><polygon points="12,2 22,12 12,22 2,12"/></svg>
+        </div>
+
+
+        <!-- Left: intro text -->
+        <div class="hero-left">
+            <div class="hero-line"></div>
+            <h1>I'm Aws, a<br>Full-Stack<br>Developer</h1>
+            <p>Bringing your ideas to life with clean, efficient, and scalable code. Web apps, APIs, and everything in between.</p>
+            <a href="#about" class="scroll-btn" aria-label="Scroll down">
+                <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+        </div>
+
+        <!-- Center: photo -->
+        <div class="hero-image">
+            <img src="./images/me.png" alt="Aws Aqhash" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Right: info panel -->
+        <div class="hero-right">
+            <!-- About Me card -->
+            <div class="info-card">
+                <div class="info-card-title">About Me</div>
+                <p>Full-stack engineer with hands-on experience at GridsApps and Asal Technologies, building production-grade web applications and APIs.</p>
+                <a href="#about" class="info-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <!-- My Work card -->
+            <div class="info-card">
+                <div class="info-card-title">My Work</div>
+                <p>From smart queue systems to AI-powered platforms, each project reflects a commitment to quality and real-world impact.</p>
+                <a href="#projects" class="info-link">
+                    Browse Portfolio
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <!-- Follow Me card -->
+            <div class="info-card">
+                <div class="info-card-title">Follow Me</div>
+                <div class="social-icons">
+                    <a href="https://github.com/AwsAqh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/awsaqhash" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:awsaqh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="./resume/Aws-Aqhash-CV.pdf" download title="Download CV"><i class="fas fa-file-pdf"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT ===== -->
     <section id="about">
         <div class="container">
+            <span class="section-tag reveal">WHO I AM</span>
             <h2 class="reveal">What I Do</h2>
             <p class="section-subtitle reveal">I specialize in building full-stack applications with modern technologies</p>
-            
             <div class="about-grid">
                 <div class="reveal">
                     <p>I'm a software engineer who loves turning ideas into reality through code. With experience in both front-end and back-end development, I create complete solutions from concept to deployment.</p>
-                    
                     <p>Recently graduated with a degree in Computer Systems Engineering, I've had the opportunity to work with great teams at GridsApps and Asal Technologies, where I contributed to real-world projects and learned the importance of writing maintainable, scalable code.</p>
-                    
                     <p>When I'm not coding, I'm probably learning about new technologies or working on side projects that challenge me to grow as a developer.</p>
-
                     <div class="about-stats">
                         <div class="stat-card">
-                            <div class="stat-number">5</div>
+                            <div class="stat-number">05</div>
                             <div class="stat-label">Major Projects</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">2</div>
+                            <div class="stat-number">02</div>
                             <div class="stat-label">Internships</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Technologies</div>
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Core Skills</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number">100%</div>
-                            <div class="stat-label">Dedication</div>
+                            <div class="stat-label">Commitment</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal">
-                    <h3 class="tech-stack-title">Tech Stack</h3>
+                    <div class="tech-stack-title">Tech Stack</div>
                     <div class="tech-stack">
                         <span class="tech-item">React.js</span>
                         <span class="tech-item">TypeScript</span>
@@ -129,186 +205,211 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== PROJECTS ===== -->
     <section id="projects">
         <div class="container">
-            <h2 class="reveal">Featured Projects</h2>
-            <p class="section-subtitle reveal">Here are some of the projects I've built</p>
-            
+            <div class="section-header">
+                <span class="section-tag reveal">PORTFOLIO</span>
+                <h2 class="reveal">Discover what I've created</h2>
+                <p class="reveal">Each piece reflects my passion for innovation and commitment to delivering exceptional results.</p>
+            </div>
             <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="./images/doormeenhome.png"/>
-                        <div class="project-placeholder">
-                            <i class="fas fa-clock"></i>
-                        </div>
+                <a href="https://door-meen.vercel.app/" class="project-card reveal" target="_blank" rel="noopener">
+                    <div class="project-img-container">
+                        <img src="./images/doormeenhome.png" alt="Door Meen" onerror="this.style.display='none'">
                     </div>
-                    <div class="project-content">
+                    <div class="project-info">
                         <h3>Door Meen</h3>
-                        <p>A smart queue management system that helps service providers manage customer flow efficiently using QR codes. Features real-time updates and secure authentication.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">React.js</span>
-                            <span class="tech-badge">ASP.NET Core</span>
-                            <span class="tech-badge">Entity Framework</span>
-                            <span class="tech-badge">JWT</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AwsAqh/DoorMeen" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="https://door-meen.vercel.app/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
+                        <p>Smart queue management system for high-traffic service providers.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>ASP.NET</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="./images/palgineer.png"/>
-                        <div class="project-placeholder">
-                            <i class="fas fa-users"></i>
-                        </div>
+                </a>
+                <a href="https://palgineer.vercel.app/" class="project-card reveal" target="_blank" rel="noopener">
+                    <div class="project-img-container">
+                        <img src="./images/palgineer.png" alt="Palgineer Connect" onerror="this.style.display='none'">
                     </div>
-                    <div class="project-content">
+                    <div class="project-info">
                         <h3>Palgineer Connect</h3>
-                        <p>A platform connecting talented engineers with opportunities. Engineers showcase their skills while recruiters discover top talent through an intuitive interface.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">React.js</span>
-                            <span class="tech-badge">ASP.NET Core</span>
-                            <span class="tech-badge">MongoDB</span>
-                            <span class="tech-badge">JWT</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AwsAqh/Palgineer-connect" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="https://palgineer.vercel.app/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
+                        <p>Specialized talent connection platform for engineers.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>React</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="./images/ptm.png"/>
-                        <div class="project-placeholder">
-                            <i class="fas fa-brain"></i>
+                </a>
+                <a href="#" class="project-card reveal" target="_blank" rel="noopener">
+                    <div class="project-img-container">
+                        <img src="./images/ptm.png" alt="PTM Machine" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-info">
+                        <h3>PTM Machine</h3>
+                        <p>AI-powered image classification and deployment ecosystem.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Portable Teachable Machine</h3>
-                        <p>My graduation project - an AI-powered system that lets users train and deploy image classification models. Includes a mobile app integrated with Raspberry Pi.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">React.js</span>
-                            <span class="tech-badge">React Native</span>
-                            <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">ML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AwsAqh/PTM_localhost" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
+                </a>
+                <a href="https://awsaqh.github.io/Flux/" class="project-card reveal" target="_blank" rel="noopener">
+                    <div class="project-img-container">
+                        <img src="./images/Flux.png" alt="Flux &amp; Luminary" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-info">
+                        <h3>Flux &amp; Luminary</h3>
+                        <p>High-fidelity landing pages exploring advanced interactions.</p>
+                        <div class="project-tags">
+                            <span>GSAP</span>
+                            <span>Canvas</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="./images/Flux.png"/>
-                        <div class="project-placeholder">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Flux</h3>
-                        <p>A modern, responsive landing page showcasing clean design principles and smooth user interactions. Built to demonstrate front-end development skills with attention to detail and user experience.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Responsive Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://awsaqh.github.io/Flux/" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="./images/Lumani.png"/>
-                        <div class="project-placeholder">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Luminary</h3>
-                        <p>An elegant landing page featuring sophisticated design and seamless animations. Created to highlight front-end development expertise and modern web design practices.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Responsive Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://awsaqh.github.io/Luminary/" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-   
+    <!-- ===== OPEN SOURCE ===== -->
+    <section id="oss">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">OPEN SOURCE</span>
+                <h2 class="reveal">My Contributions</h2>
+                <p class="reveal">Giving back to the community by contributing code to major open-source projects.</p>
+            </div>
+            <div class="projects-grid">
+                
+                <a href="https://github.com/OrchardCMS/OrchardCore" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>OrchardCore</h3>
+                        <p>An open-source modular and multi-tenant application framework and CMS built with ASP.NET Core.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> CMS</span>
+                            <span><i class="fas fa-code-branch"></i> C#</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/kubernetes-sigs/kueue" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>kubernetes-sigs / kueue</h3>
+                        <p>Kubernetes-native Job Queueing system that manages quotas and how jobs seamlessly consume them.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> Kubernetes</span>
+                            <span><i class="fas fa-code-branch"></i> Go</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/meshery/meshery" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>meshery</h3>
+                        <p>The cloud native manager. Extensible engineering platform that enables collaborative infrastructure management.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> Cloud Native</span>
+                            <span><i class="fas fa-code-branch"></i> Go</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/xunit/xunit.analyzers" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>xunit.analyzers</h3>
+                        <p>Roslyn analyzers for xUnit.net. Helps developers write better underlying tests with best practices.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> Testing</span>
+                            <span><i class="fas fa-code-branch"></i> C#</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/openfoodfoundation/openfoodnetwork" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>openfoodnetwork</h3>
+                        <p>A free and open source software platform to connect suppliers, distributors and consumers to trade local produce.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> Network</span>
+                            <span><i class="fas fa-code-branch"></i> Ruby</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/lingdojo/kana-dojo" class="oss-card reveal" target="_blank" rel="noopener">
+                    <div class="oss-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                    </div>
+                    <div class="oss-info">
+                        <h3>kana-dojo</h3>
+                        <p>Aesthetic, minimalist platform for learning Japanese, built with Next.js and React.</p>
+                        <div class="oss-meta">
+                            <span><i class="fas fa-star"></i> EdTech</span>
+                            <span><i class="fas fa-code-branch"></i> TypeScript</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience">
         <div class="container">
+            <span class="section-tag reveal">CAREER</span>
             <h2 class="reveal">My Journey</h2>
             <p class="section-subtitle reveal">Where I've worked and what I've learned</p>
-            
             <div class="timeline">
                 <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
+                    <div class="date">2025.07 — PRESENT</div>
+                    <div class="company">GridsApps LLC</div>
                     <div class="timeline-content">
                         <h3>Full-Stack Developer Intern</h3>
-                        <div class="company">GridsApps LLC</div>
-                        <div class="date">July 2025 – October 2025</div>
                         <ul>
-                            <li>Built complete features from database to UI using Node.js and React</li>
-                            <li>Implemented secure authentication and authorization systems</li>
-                            <li>Wrote comprehensive unit tests to ensure code quality</li>
+                            <li>Engineered core features across the full stack using Node.js and React.</li>
+                            <li>Implemented robust security and authorization frameworks.</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
+                    <div class="date">2025.03 — 2025.08</div>
+                    <div class="company">Asal Technologies</div>
                     <div class="timeline-content">
                         <h3>Backend Developer Intern</h3>
-                        <div class="company">Asal Technologies</div>
-                        <div class="date">March 2025 – August 2025</div>
                         <ul>
-                            <li>Contributed to multiple microservices in production</li>
-                            <li>Designed RESTful APIs following best practices</li>
-                            <li>Collaborated with frontend developers for seamless integration</li>
+                            <li>Optimized production microservices and architected resilient RESTful APIs.</li>
+                            <li>Enhanced system interoperability through cross-domain collaboration.</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
+                    <div class="date">July 2025</div>
+                    <div class="company">Arab American University</div>
                     <div class="timeline-content">
-                        <h3>Graduated with Bachelor's Degree</h3>
-                        <div class="company">Arab American University</div>
-                        <div class="date">July 2025</div>
+                        <h3>Bachelor's Degree — Computer Systems Engineering</h3>
                         <ul>
-                            <li>Computer Systems Engineering</li>
                             <li>Focused on software development and system architecture</li>
                             <li>Completed machine learning graduation project</li>
                         </ul>
@@ -318,41 +419,30 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
+            <span class="section-tag reveal" style="display:block;text-align:center;">GET IN TOUCH</span>
             <h2 class="reveal">Let's Work Together</h2>
             <p class="section-subtitle section-subtitle-center reveal">I'm available for full-time opportunities. Let's create something amazing!</p>
-            
             <div class="contact-grid">
                 <div class="contact-card reveal">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Email Me</h3>
                     <a href="mailto:awsaqh@gmail.com">awsaqh@gmail.com</a>
                 </div>
-
                 <div class="contact-card reveal">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
                     <h3>Call Me</h3>
                     <a href="tel:+972595152186">+972 59 515 2186</a>
                 </div>
-
                 <div class="contact-card reveal">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
                     <h3>GitHub</h3>
                     <a href="https://github.com/AwsAqh" target="_blank">github.com/AwsAqh</a>
                 </div>
-
                 <div class="contact-card reveal">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
                     <h3>LinkedIn</h3>
                     <a href="https://www.linkedin.com/in/awsaqhash" target="_blank">linkedin.com/in/awsaqhash</a>
                 </div>
@@ -360,113 +450,147 @@
         </div>
     </section>
 
-    <!-- Web Ring -->
-    <div class="web-ring">
-        <a href="#"><< Previous Site</a>
-        <a href="#">Web Ring Home</a>
-        <a href="#">>> Next Site</a>
-    </div>
-
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Aws Aqhash. Crafted with passion and code.</p>
-        <div class="social-links">
-            <a href="https://github.com/AwsAqh" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/awsaqhash" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:awsaqh@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="./resume/Aws-Aqhash-CV.pdf" download title="Download CV">
-                <i class="fas fa-file-pdf"></i>
-            </a>
+            <p>&copy; 2025 Aws Aqhash. Engineered for high performance.</p>
+            <div class="footer-social">
+                <a href="https://github.com/AwsAqh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/awsaqhash" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:awsaqh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="./resume/Aws-Aqhash-CV.pdf" download title="Download CV"><i class="fas fa-file-pdf"></i></a>
+            </div>
         </div>
-        <div class="visitor-counter">
-            <div>VISITORS SINCE 1999:</div>
-            <div class="counter-number">000001</div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+        // ===== Mobile Menu =====
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
         }
 
-        function closeMenu() {
-            document.getElementById('navLinks').classList.remove('active');
-        }
-
-        // Smooth scrolling
+        // ===== Smooth scroll =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    const offset = 68;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                    closeMobileMenu();
                 }
             });
         });
 
-        // Navbar scroll effect
-        let lastScroll = 0;
+        // ===== Nav scroll state =====
         const navbar = document.getElementById('navbar');
-
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
+            navbar.style.borderBottomColor = window.pageYOffset > 20
+                ? 'rgba(255,255,255,0.08)'
+                : 'rgba(255,255,255,0.05)';
         });
 
-        // Scroll reveal animation
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            reveals.forEach(element => {
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', reveal);
-        reveal(); // Check on load
-
-        // Add active state to nav links based on scroll position
+        // ===== Active nav link =====
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             const scrollY = window.pageYOffset;
-
             sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.style.color = '';
-                    });
-                    if (navLink) {
-                        navLink.style.color = 'var(--primary)';
-                    }
+                const top = section.offsetTop - 100;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+                if (scrollY >= top && scrollY < top + height) {
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    if (link) link.classList.add('active');
                 }
             });
+        });
+
+        // ===== Reveal on scroll =====
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 90) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+
+        // ===== Bot Companion =====
+        const bot = document.getElementById('bot');
+        let botX = window.innerWidth - 120;
+        let botY = window.innerHeight - 120;
+        let targetX = botX;
+        let targetY = botY;
+        let animating = false;
+
+        // Set initial position
+        bot.style.left = botX + 'px';
+        bot.style.top  = botY + 'px';
+
+        const messages = [
+            'Nice portfolio! 🚀',
+            'Built with ❤️',
+            'Hello there! 👋',
+            'Let\'s build something!',
+            'Clean code > anything',
+            'Full-stack dev here 💻',
+        ];
+        let msgIdx = 0;
+
+        function pickNewTarget() {
+            const margin = 80;
+            targetX = margin + Math.random() * (window.innerWidth  - margin * 2);
+            targetY = margin + Math.random() * (window.innerHeight - margin * 2);
+        }
+
+        function moveBot() {
+            // Use CSS transition for smoothness — just update left/top
+            bot.style.left = targetX + 'px';
+            bot.style.top  = targetY + 'px';
+            animating = false;
+            // Update message
+            document.getElementById('botMessage').textContent = messages[msgIdx % messages.length];
+            msgIdx++;
+        }
+
+        function scheduleNextMove() {
+            const delay = 2000 + Math.random() * 3000;
+            setTimeout(() => {
+                pickNewTarget();
+                moveBot();
+                scheduleNextMove();
+            }, delay);
+        }
+
+        scheduleNextMove();
+
+        // Wiggle on click
+        document.getElementById('botBody').addEventListener('click', () => {
+            bot.style.transform = 'rotate(15deg) scale(1.15)';
+            setTimeout(() => { bot.style.transform = ''; }, 400);
+            // Jump to a new spot immediately
+            pickNewTarget();
+            moveBot();
+        });
+
+        window.addEventListener('resize', () => {
+            // Keep bot in bounds on resize
+            if (botX > window.innerWidth - 80) {
+                botX = window.innerWidth - 100;
+                bot.style.left = botX + 'px';
+            }
+            if (botY > window.innerHeight - 80) {
+                botY = window.innerHeight - 100;
+                bot.style.top = botY + 'px';
+            }
         });
     </script>
 </body>
