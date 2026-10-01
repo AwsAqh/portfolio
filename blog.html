@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Aws Aqhash</title>
+    <meta name="description" content="All posts by Aws Aqhash — write-ups on what I've been building, learning, and thinking about.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="./index.html#home" class="logo">
+                <span class="logo-icon">&lt;<span class="slash">/</span>&gt;</span>
+                <span class="logo-name">Aws Aqhash</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html#home" class="nav-link">Portfolio</a></li>
+                <li><a href="./index.html#about" class="nav-link">About</a></li>
+                <li><a href="./index.html#projects" class="nav-link">Work</a></li>
+                <li><a href="./blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="./index.html#contact" class="btn-nav">Hire me</a>
+                <div class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./index.html#home" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="./index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="./index.html#projects" onclick="closeMobileMenu()">Work</a>
+        <a href="./index.html#experience" onclick="closeMobileMenu()">Experience</a>
+        <a href="./blog.html" onclick="closeMobileMenu()">Blog</a>
+        <a href="./index.html#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <!-- ===== BLOG HEADER ===== -->
+    <header class="blog-page-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">BLOG</span>
+                <h1 class="reveal">All Posts</h1>
+                <p class="reveal">Every write-up on what I've been building, learning, and thinking about.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== BLOG LIST ===== -->
+    <section class="blog-page-body">
+        <div class="container">
+            <!-- Filter pills are injected by blog.js from POST_FILTERS -->
+            <div class="blog-filters" id="blogFilters"></div>
+
+            <!-- All posts are rendered here by blog.js -->
+            <div class="blog-grid" id="allPostsGrid"></div>
+
+            <div class="blog-view-all">
+                <a href="./index.html#blog" class="blog-view-all-btn">
+                    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back to portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog post modal -->
+    <div class="blog-modal-overlay" id="blogOverlay" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+        <div class="blog-modal" id="blogModal">
+            <button class="blog-modal-close" id="blogModalClose" aria-label="Close">&times;</button>
+            <div class="blog-modal-meta" id="blogModalMeta"></div>
+            <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+            <div class="blog-modal-body" id="blogModalBody"></div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aws Aqhash. Engineered for high performance.</p>
+            <div class="footer-social">
+                <a href="https://github.com/AwsAqh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/awsaqhash" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:awsaqh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="./resume/Aws-Aqhash-CV.pdf" download title="Download CV"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Mobile Menu =====
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+        }
+
+        // ===== Nav scroll state =====
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            navbar.style.borderBottomColor = window.pageYOffset > 20
+                ? 'rgba(255,255,255,0.08)'
+                : 'rgba(255,255,255,0.05)';
+        });
+
+        // ===== Reveal on scroll =====
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 90) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+
+    <!-- Posts data + shared blog rendering (loads after reveal()) -->
+    <script src="./posts.js"></script>
+    <script src="./blog.js"></script>
+</body>
+</html>
+

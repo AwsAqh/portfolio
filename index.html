@@ -52,6 +52,7 @@
                 <li><a href="#home" class="nav-link active">Portfolio</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
@@ -73,6 +74,7 @@
         <a href="#about" onclick="closeMobileMenu()">About</a>
         <a href="#projects" onclick="closeMobileMenu()">Work</a>
         <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+        <a href="#blog" onclick="closeMobileMenu()">Blog</a>
         <a href="#contact" onclick="closeMobileMenu()">Contact</a>
     </div>
 
@@ -452,6 +454,39 @@
         </div>
     </section>
 
+    <!-- ===== BLOG ===== -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">BLOG</span>
+                <h2 class="reveal">Thoughts &amp; Notes</h2>
+                <p class="reveal">Short write-ups on what I've been building, learning, and thinking about.</p>
+            </div>
+
+            <!-- Latest posts are rendered here by blog.js, capped at HOME_POST_LIMIT -->
+            <div class="blog-grid" id="blogGrid"></div><!-- /blog-grid -->
+
+            <!-- View all CTA -->
+            <div class="blog-view-all reveal" id="viewAllCta" style="display:none;">
+                <a href="./blog.html" class="blog-view-all-btn">
+                    View all posts
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Blog post modal -->
+    <div class="blog-modal-overlay" id="blogOverlay" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+        <div class="blog-modal" id="blogModal">
+            <button class="blog-modal-close" id="blogModalClose" aria-label="Close">&times;</button>
+            <div class="blog-modal-meta" id="blogModalMeta"></div>
+            <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+            <div class="blog-modal-body" id="blogModalBody"></div>
+        </div>
+    </div>
+
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
@@ -626,5 +661,9 @@
             }
         });
     </script>
+
+    <!-- Posts data + shared blog rendering (loads after reveal()) -->
+    <script src="./posts.js"></script>
+    <script src="./blog.js"></script>
 </body>
 </html>
