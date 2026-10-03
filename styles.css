@@ -1259,6 +1259,46 @@ footer p {
     font-weight: 600;
 }
 
+/* Post links */
+.blog-modal-body .blog-links {
+    margin-top: 1.6rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--panel-border);
+}
+
+.blog-modal-body .blog-links h4 {
+    margin: 0 0 0.75rem;
+}
+
+.blog-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(59,130,246,0.35);
+    background: rgba(37,99,235,0.1);
+    color: var(--blue-light);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.blog-link:hover {
+    background: rgba(37,99,235,0.18);
+    border-color: rgba(59,130,246,0.6);
+    transform: translateY(-1px);
+}
+
+.blog-link i { font-size: 0.85rem; }
+
 /* Responsive blog */
 @media (max-width: 768px) {
     .blog-grid {

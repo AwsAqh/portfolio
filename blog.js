@@ -57,7 +57,18 @@
             '<span class="blog-date"><i class="fas fa-calendar-alt"></i> ' + post.date + '</span>' +
             '<span class="blog-tag-pill">' + post.tag + '</span>';
         document.getElementById('blogModalTitle').textContent = post.title;
-        document.getElementById('blogModalBody').innerHTML = post.body;
+        var bodyHTML = post.body;
+        if (post.links && post.links.length) {
+            bodyHTML += '<div class="blog-links">' +
+                '<h4>Links</h4>' +
+                '<div class="blog-links-list">' +
+                post.links.map(function (l) {
+                    return '<a class="blog-link" href="' + l.url + '" target="_blank" rel="noopener noreferrer">' +
+                        '<i class="' + (l.icon || 'fas fa-link') + '"></i><span>' + l.label + '</span></a>';
+                }).join('') +
+                '</div></div>';
+        }
+        document.getElementById('blogModalBody').innerHTML = bodyHTML;
         overlay.classList.add('open');
         document.body.style.overflow = 'hidden';
     }

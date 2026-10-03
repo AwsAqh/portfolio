@@ -27,6 +27,10 @@ const BLOG_POSTS = [
         date: 'Oct 1, 2026', tag: 'Dev Log', tags: ['devlog'],
         title: 'Building a Safe Logging Middleware for Node.js',
         excerpt: "A quick outline of the safe-logging package I've been working on — automatically redacting secrets, tokens, and PII before they hit your log sink.",
+        links: [
+            { label: 'npm: @awsaqh/redact-logs', url: 'https://www.npmjs.com/package/@awsaqh/redact-logs', icon: 'fab fa-npm' },
+            { label: 'Source on GitHub', url: 'https://github.com/AwsAqh/redact-logs', icon: 'fab fa-github' }
+        ],
         body: `
             <p>One of the most common production incidents I've seen is accidentally logging sensitive data — API keys, passwords, JWT tokens, or user PII slipping into your log output.</p>
             <h4>The Problem</h4>
@@ -45,6 +49,9 @@ const BLOG_POSTS = [
         date: 'Sep 22, 2026', tag: 'TIL', tags: ['til'],
         title: 'TIL: Kubernetes Job Queueing with Kueue',
         excerpt: 'Notes from my open-source contribution to kubernetes-sigs/kueue — how quota management works and why it matters for batch workloads.',
+        links: [
+            { label: 'kubernetes-sigs/kueue', url: 'https://github.com/kubernetes-sigs/kueue', icon: 'fab fa-github' }
+        ],
         body: `
             <p>While contributing to <strong>kubernetes-sigs/kueue</strong>, I had to really understand the quota and borrowing model. Here's my condensed understanding.</p>
             <h4>What is Kueue?</h4>
@@ -63,6 +70,9 @@ const BLOG_POSTS = [
         date: 'Sep 10, 2026', tag: 'Tools', tags: ['tools'],
         title: 'n8n vs Custom Scripts — When to Use Which',
         excerpt: 'A pragmatic comparison of low-code automation (n8n) vs rolling your own scripts, with concrete tradeoffs for solo developers and small teams.',
+        links: [
+            { label: 'n8n.io', url: 'https://n8n.io', icon: 'fas fa-link' }
+        ],
         body: `
             <p>I've been using both n8n and plain Node.js scripts for automation. Here's my honest take on when each makes sense.</p>
             <h4>Use n8n when…</h4>
@@ -85,6 +95,9 @@ const BLOG_POSTS = [
         date: 'Aug 28, 2026', tag: 'Career', tags: ['career'],
         title: 'What I Learned in My First Full-Stack Internship',
         excerpt: 'Reflections from my time at GridsApps — shipping features fast, code review culture, and the gap between university projects and production code.',
+        links: [
+            { label: 'GridsApps', url: 'https://gridsapps.com', icon: 'fas fa-link' }
+        ],
         body: `
             <p>Three months at GridsApps taught me more about real-world engineering than two years of side projects. Here are the biggest lessons.</p>
             <h4>1. Code Review is a Skill</h4>
@@ -101,6 +114,9 @@ const BLOG_POSTS = [
         date: 'Aug 12, 2026', tag: 'Dev Log', tags: ['devlog'],
         title: 'ZerfAi: From Idea to Launch in 3 Weeks',
         excerpt: 'The full story of building and shipping ZerfAi — the AI-powered SaaS idea analyzer — from an empty repo to a live product with real users.',
+        links: [
+            { label: 'zerfai.com', url: 'https://www.zerfai.com/', icon: 'fas fa-link' }
+        ],
         body: `
             <p>ZerfAi started as a weekend experiment: what if I could feed AI real pain-point threads from Reddit and ProductHunt to validate SaaS ideas systematically?</p>
             <h4>Week 1 — Core Loop</h4>
@@ -117,6 +133,9 @@ const BLOG_POSTS = [
         date: 'Jul 30, 2026', tag: 'TIL', tags: ['til'],
         title: 'TIL: Roslyn Analyzers and How They Catch Bugs at Compile Time',
         excerpt: 'While contributing to xunit.analyzers I learned how Roslyn analyzers work — and how to write your own diagnostic rules to enforce coding standards.',
+        links: [
+            { label: 'xunit/xunit.analyzers', url: 'https://github.com/xunit/xunit.analyzers', icon: 'fab fa-github' }
+        ],
         body: `
             <p>Contributing to <strong>xunit.analyzers</strong> introduced me to Roslyn — the .NET compiler platform that lets you write custom diagnostic rules.</p>
             <h4>What's a Roslyn Analyzer?</h4>
